@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CareerLens helps students discover tech careers, understand required skills, and build personalized learning paths.">
+  <title>CareerLens | Find Your Career Path</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="navbar" id="navbar">
+    <a href="#" class="logo">
+      <span class="logo-mark">C</span>
+      <span>Career<span>Lens</span></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#careers">Explore Careers</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#skill-gap">Skill Gap</a>
+      <a href="#about">About</a>
+      <a href="auth.html" class="nav-login">Login</a>
+      <a href="auth.html?mode=signup" class="nav-cta">Get Started <span>→</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-glow glow-one"></div>
+      <div class="hero-glow glow-two"></div>
+
+      <div class="hero-content">
+        <div class="eyebrow">
+          <span class="pulse-dot"></span>
+          Built for the next generation
+        </div>
+
+        <h1>
+          Your career.
+          <span>Your skills.</span>
+          <strong>Your path.</strong>
+        </h1>
+
+        <p>
+          Discover what skills your dream tech career needs,
+          identify your gaps, and turn your goals into a practical learning roadmap.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#careers" class="btn btn-primary">Explore Careers <span>→</span></a>
+          <a href="#skill-gap" class="btn btn-secondary">Find My Skill Gap</a>
+        </div>
+
+        <div class="hero-trust">
+          <div class="avatars">
+            <span>AI</span><span>DS</span><span>WD</span><span>CL</span>
+          </div>
+          <p>Explore paths across <strong>AI, software, data & cloud</strong></p>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="career-card-main">
+          <div class="card-top">
+            <div>
+              <span class="small-label">TARGET CAREER</span>
+              <h3>AI / ML Engineer</h3>
+            </div>
+            <span class="status-badge">In demand</span>
+          </div>
+
+          <div class="progress-wrap">
+            <div class="progress-info">
+              <span>Your readiness</span>
+              <strong>68%</strong>
+            </div>
+            <div class="progress-bar"><span></span></div>
+          </div>
+
+          <div class="mini-skills">
+            <div><span class="skill-icon">Py</span><b>Python</b><em class="good">Strong</em></div>
+            <div><span class="skill-icon">DS</span><b>DSA</b><em class="medium">Improve</em></div>
+            <div><span class="skill-icon">ML</span><b>Machine Learning</b><em class="start">Start</em></div>
+          </div>
+
+          <div class="next-step">
+            <div class="next-icon">✦</div>
+            <div>
+              <span>NEXT RECOMMENDED STEP</span>
+              <b>Learn NumPy & Pandas fundamentals</b>
+            </div>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+
+        <div class="floating-card floating-top">
+          <span class="float-icon">⌁</span>
+          <div><small>SKILL GAP</small><b>4 skills to improve</b></div>
+        </div>
+
+        <div class="floating-card floating-bottom">
+          <span class="check">✓</span>
+          <div><small>ROADMAP</small><b>Personalized for you</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div><strong>12+</strong><span>Career paths</span></div>
+      <div><strong>50+</strong><span>Core skills</span></div>
+      <div><strong>100+</strong><span>Learning steps</span></div>
+      <div><strong>1</strong><span>Personalized direction</span></div>
+    </section>
+
+    <section class="section careers-section" id="careers">
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker">EXPLORE YOUR OPTIONS</span>
+          <h2>Which path feels like <span>you?</span></h2>
+        </div>
+        <p>Compare different tech careers and understand the skills behind each one.</p>
+      </div>
+
+      <div class="career-toolbar">
+        <div class="search-box">
+          <span>⌕</span>
+          <input type="text" id="careerSearch" placeholder="Search careers..." aria-label="Search careers">
+        </div>
+        <div class="filter-buttons" id="filterButtons">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="development">Development</button>
+          <button class="filter" data-filter="data">Data & AI</button>
+          <button class="filter" data-filter="cloud">Cloud & Security</button>
+        </div>
+      </div>
+
+      <div class="career-grid" id="careerGrid">
+        <article class="career-card" data-category="data" data-name="AI Machine Learning Engineer">
+          <div class="career-icon icon-purple">✦</div>
+          <span class="career-tag">DATA & AI</span>
+          <h3>AI / ML Engineer</h3>
+          <p>Build intelligent systems using data, machine learning and AI.</p>
+          <div class="card-skills"><span>Python</span><span>ML</span><span>Statistics</span></div>
+          <a href="#skill-gap" class="learn-link" data-career="AI / ML Engineer">View path <span>→</span></a>
+        </article>
+
+        <article class="career-card" data-category="development" data-name="Full Stack Developer">
+          <div class="career-icon icon-blue">⌘</div>
+          <span class="career-tag">DEVELOPMENT</span>
+          <h3>Full-Stack Developer</h3>
+          <p>Create complete web applications from interface to backend.</p>
+          <div class="card-skills"><span>JavaScript</span><span>React</span><span>SQL</span></div>
+          <a href="#skill-gap" class="learn-link" data-career="Full-Stack Developer">View path <span>→</span></a>
+        </article>
+
+        <article class="career-card" data-category="data" data-name="Data Analyst">
+          <div class="career-icon icon-green">▦</div>
+          <span class="career-tag">DATA & AI</span>
+          <h3>Data Analyst</h3>
+          <p>Turn raw data into insights that help people make decisions.</p>
+          <div class="card-skills"><span>SQL</span><span>Excel</span><span>Power BI</span></div>
+          <a href="#skill-gap" class="learn-link" data-career="Data Analyst">View path <span>→</span></a>
+        </article>
+
+        <article class="career-card" data-category="cloud" data-name="Cloud Engineer">
+          <div class="career-icon icon-orange">☁</div>
+          <span class="career-tag">CLOUD & SECURITY</span>
+          <h3>Cloud Engineer</h3>
+          <p>Design, deploy and manage scalable cloud infrastructure.</p>
+          <div class="card-skills"><span>AWS</span><span>Linux</span><span>Docker</span></div>
+          <a href="#skill-gap" class="learn-link" data-career="Cloud Engineer">View path <span>→</span></a>
+        </article>
+
+        <article class="career-card" data-category="cloud" data-name="Cybersecurity Analyst">
+          <div class="career-icon icon-red">◈</div>
+          <span class="career-tag">CLOUD & SECURITY</span>
+          <h3>Cybersecurity Analyst</h3>
+          <p>Protect systems, networks and data from security threats.</p>
+          <div class="card-skills"><span>Networking</span><span>Linux</span><span>Security</span></div>
+          <a href="#skill-gap" class="learn-link" data-career="Cybersecurity Analyst">View path <span>→</span></a>
+        </article>
+
+        <article class="career-card" data-category="development" data-name="Mobile App Developer">
+          <div class="career-icon icon-pink">▣</div>
+          <span class="career-tag">DEVELOPMENT</span>
+          <h3>Mobile App Developer</h3>
+          <p>Build useful mobile experiences for Android and iOS users.</p>
+          <div class="card-skills"><span>Flutter</span><span>Dart</span><span>APIs</span></div>
+          <a href="#skill-gap" class="learn-link" data-career="Mobile App Developer">View path <span>→</span></a>
+        </article>
+      </div>
+
+      <p class="empty-state" id="emptyState">No careers found. Try another search.</p>
+    </section>
+
+    <section class="section how-section" id="how-it-works">
+      <div class="center-heading">
+        <span class="section-kicker">HOW CAREERLENS WORKS</span>
+        <h2>From <span>confused</span> to confident.</h2>
+        <p>A simple process that helps you understand your next move.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <span class="step-number">01</span>
+          <div class="step-icon">⌕</div>
+          <h3>Choose a career</h3>
+          <p>Explore technology careers and choose the one you want to understand better.</p>
+        </div>
+        <div class="step-line"></div>
+        <div class="step">
+          <span class="step-number">02</span>
+          <div class="step-icon">◫</div>
+          <h3>Map your skills</h3>
+          <p>Tell CareerLens what you already know and see where you stand.</p>
+        </div>
+        <div class="step-line"></div>
+        <div class="step">
+          <span class="step-number">03</span>
+          <div class="step-icon">✦</div>
+          <h3>Build your path</h3>
+          <p>Follow a clear sequence of skills and projects to keep moving forward.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="skill-section" id="skill-gap">
+      <div class="skill-copy">
+        <span class="section-kicker">THE SKILL GAP CHECK</span>
+        <h2>Know where you are.<br><span>Know what comes next.</span></h2>
+        <p>
+          Don't learn randomly. CareerLens helps you compare your current skills
+          with the skills commonly used in your target role.
+        </p>
+
+        <div class="selector">
+          <label for="careerSelect">I want to become a</label>
+          <select id="careerSelect">
+            <option>AI / ML Engineer</option>
+            <option>Full-Stack Developer</option>
+            <option>Data Analyst</option>
+            <option>Cloud Engineer</option>
+          </select>
+        </div>
+
+        <button class="btn btn-primary analyze-btn" id="analyzeBtn">Analyze My Path <span>→</span></button>
+      </div>
+
+      <div class="skill-dashboard">
+        <div class="dashboard-head">
+          <div>
+            <span>YOUR SKILL SNAPSHOT</span>
+            <h3 id="dashboardCareer">AI / ML Engineer</h3>
+          </div>
+          <div class="readiness"><strong id="readinessScore">68%</strong><span>readiness</span></div>
+        </div>
+
+        <div class="skill-row">
+          <div><span>Python</span><b>80%</b></div>
+          <div class="dashboard-bar"><i style="width:80%"></i></div>
+          <small class="skill-state good-state">Strong foundation</small>
+        </div>
+        <div class="skill-row">
+          <div><span>DSA</span><b>55%</b></div>
+          <div class="dashboard-bar"><i style="width:55%"></i></div>
+          <small class="skill-state improve-state">Needs practice</small>
+        </div>
+        <div class="skill-row">
+          <div><span>Statistics</span><b>35%</b></div>
+          <div class="dashboard-bar"><i style="width:35%"></i></div>
+          <small class="skill-state start-state">Start learning</small>
+        </div>
+        <div class="skill-row">
+          <div><span>Machine Learning</span><b>20%</b></div>
+          <div class="dashboard-bar"><i style="width:20%"></i></div>
+          <small class="skill-state start-state">Start learning</small>
+        </div>
+
+        <div class="dashboard-footer">
+          <span>✦</span>
+          <p><b>Your next focus:</b> Build a strong foundation in Statistics.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section roadmap-section">
+      <div class="roadmap-intro">
+        <span class="section-kicker">A PATH, NOT A LIST</span>
+        <h2>See your skills <span>connect.</span></h2>
+        <p>Career goals become easier when you can see how one skill leads to another.</p>
+      </div>
+
+      <div class="roadmap">
+        <div class="roadmap-node completed">
+          <span>✓</span><b>Python</b><small>Foundation</small>
+        </div>
+        <div class="roadmap-connector active"></div>
+        <div class="roadmap-node completed">
+          <span>✓</span><b>NumPy</b><small>Data basics</small>
+        </div>
+        <div class="roadmap-connector active"></div>
+        <div class="roadmap-node current">
+          <span>03</span><b>Statistics</b><small>You're here</small>
+        </div>
+        <div class="roadmap-connector"></div>
+        <div class="roadmap-node">
+          <span>04</span><b>Machine Learning</b><small>Next</small>
+        </div>
+        <div class="roadmap-connector"></div>
+        <div class="roadmap-node">
+          <span>05</span><b>Projects</b><small>Build proof</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" id="about">
+      <div class="cta-glow"></div>
+      <div class="cta-content">
+        <span class="section-kicker">START WITH ONE DECISION</span>
+        <h2>You don't need your whole career figured out.</h2>
+        <p>You just need to know your next step.</p>
+        <a href="#careers" class="btn btn-light">Explore Career Paths <span>→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-main">
+      <a href="#" class="logo footer-logo">
+        <span class="logo-mark">C</span>
+        <span>Career<span>Lens</span></span>
+      </a>
+      <p>Helping students turn career questions into clear next steps.</p>
+      <div class="footer-links">
+        <a href="#careers">Careers</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#skill-gap">Skill Gap</a>
+        <a href="#about">About</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 CareerLens. Built for learners.</span>
+      <span>Learn with purpose. Build with confidence.</span>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

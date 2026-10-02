@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CareerLens | Login</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body{min-height:100vh;display:grid;place-items:center;background:#f7f7fb;font-family:Arial,sans-serif}
+    .auth-wrap{width:min(460px,92%);background:#fff;padding:32px;border-radius:22px;box-shadow:0 20px 60px rgba(20,20,50,.12)}
+    .auth-logo{font-size:28px;font-weight:800;margin-bottom:8px}.auth-logo span{color:#6c5ce7}
+    .auth-sub{color:#666;margin-bottom:24px}.auth-tabs{display:flex;gap:8px;margin-bottom:20px}.auth-tabs button{flex:1;padding:11px;border:0;border-radius:10px;cursor:pointer;background:#eee}.auth-tabs button.active{background:#6c5ce7;color:#fff}
+    label{display:block;font-weight:600;margin:12px 0 7px}input{width:100%;box-sizing:border-box;padding:13px;border:1px solid #ddd;border-radius:10px;font-size:15px} .primary{width:100%;margin-top:18px;padding:13px;border:0;border-radius:10px;background:#6c5ce7;color:#fff;font-weight:700;cursor:pointer}.msg{margin-top:14px;padding:10px;border-radius:10px;display:none;font-size:14px}.msg.show{display:block}.back{display:inline-block;margin-top:20px;color:#555;text-decoration:none}
+  </style>
+</head>
+<body>
+  <main class="auth-wrap">
+    <div class="auth-logo">Career<span>Lens</span></div>
+    <p class="auth-sub">Create your account and start building your career path.</p>
+    <div class="auth-tabs">
+      <button id="loginTab" class="active">Login</button>
+      <button id="signupTab">Sign Up</button>
+    </div>
+    <form id="authForm">
+      <label for="name" id="nameLabel" hidden>Name</label>
+      <input id="name" type="text" placeholder="Your name" hidden>
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="you@example.com" required>
+      <label for="password">Password</label>
+      <input id="password" type="password" placeholder="At least 6 characters" minlength="6" required>
+      <button class="primary" type="submit" id="submitBtn">Login</button>
+    </form>
+    <div class="msg" id="message"></div>
+    <a class="back" href="index.html">← Back to CareerLens</a>
+  </main>
+  <script type="module" src="js/auth.js"></script>
+</body>
+</html>
